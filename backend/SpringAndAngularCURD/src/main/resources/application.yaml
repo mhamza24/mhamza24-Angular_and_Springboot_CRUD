@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/angular_crud_db
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 10000
+      connection-timeout: 20000
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  devtools:
+    restart:
+      enabled: true
+server:
+  port: 8081
+  error:
+    include-message: always
+
+
