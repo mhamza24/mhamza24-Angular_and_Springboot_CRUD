@@ -1,0 +1,29 @@
+<button routerLink="/post_customer">
+  Add Customer
+</button>
+<br />
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Date Created At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers">
+      <td>{{ customer.id }}</td>
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.email }}</td>
+      <td>{{ customer.status }}</td>
+      <td>{{ customer.createdAt }}</td>
+      <td>
+        <button routerLink="/update_customer/{{customer.id}}">Update</button>
+        <button (click)="deleteCustomer(customer.id)" class="delete">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

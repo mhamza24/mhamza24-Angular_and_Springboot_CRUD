@@ -1,0 +1,84 @@
+// General styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+// Button styles
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+
+    &:hover {
+        background-color: #45a049;
+    }
+
+    &.delete {
+        background-color: #dc3545;
+
+        &:hover {
+            background-color: #c82333;
+        }
+    }
+}
+
+// Table styles
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+
+    thead {
+        background-color: #333;
+        color: white;
+    }
+
+    th,
+    td {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+
+    td {
+
+        // Aligning buttons side-by-side under Actions
+        button {
+            display: inline-block;
+            background-color: #007bff;
+
+            &:first-of-type {
+                background-color: #ffc107;
+            }
+        }
+    }
+}
+
+// Styles for Add Customer button
+button[routerLink="/post_customer"] {
+    background-color: #007bff;
+    margin-bottom: 20px;
+}
